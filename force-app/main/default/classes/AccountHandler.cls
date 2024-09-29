@@ -9,7 +9,7 @@ public class AccountHandler {
            a.AccountNumber = 'A000' + counter ;
            addAccounts.add(a);
            counter++;
-           
+           System.debug('Hello');
        }
        Delete addAccounts;
    }
