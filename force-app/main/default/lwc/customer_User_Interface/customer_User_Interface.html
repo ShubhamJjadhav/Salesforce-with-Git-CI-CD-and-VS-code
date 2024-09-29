@@ -1,0 +1,56 @@
+<template>
+    <lightning-card title="Choose Color For Your Car" icon-name="custom:custom67">
+        <p class="slds-p-horizontal_small">
+            <template if:true={options}>
+                <div class="slds-m-around_medium">
+
+                    <!-- Select Your Car -->
+                    <lightning-combobox
+                    name="Car Name"
+                    label="Car Name"
+                    value={selectedValue}
+                    placeholder="Select Your Car"
+                    options={options}
+                    onchange={handleChange}></lightning-combobox> 
+
+                    <!-- Select colour -->
+                    <lightning-combobox
+                    name="Car Name"
+                    label="Choose Colour"
+                    value={value}
+                    placeholder="Select Colour"                   
+                    options={chooseColorValues}
+                    onchange={handleChange}></lightning-combobox>
+
+                    <!-- Price for Colour -->
+                    <lightning-combobox
+                    name="Price"
+                    label="Price for Colour"
+                    value={value}
+                    placeholder="-Price-"                   
+                    options={priceForColourValue}
+                    onchange={handleChange}>
+                    </lightning-combobox>
+
+                    <!-- <template if:true={priceColourPicklist.data}>
+
+                        <lightning-combobox name="Price For Colour" label="Price For Colour" value={value}
+        
+                            options={priceColourPicklist.data.values} onchange={handleChange}>
+        
+                        </lightning-combobox>
+        
+                    </template> -->
+
+                    
+
+
+                
+
+                </div>
+            </template>
+            
+        </p>
+    </lightning-card>
+
+</template>

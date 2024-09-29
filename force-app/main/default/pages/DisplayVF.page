@@ -1,0 +1,14 @@
+<apex:page standardController="Car_Model__c">
+    <apex:form >
+        <apex:pageBlock title=" Display Car Details Details">
+           		<apex:pageBlockTable value="{!Car_Model__c}" var="CAR_m">
+                    <apex:column value="{!CAR_m.name}"/>>
+                    <apex:column value="{!CAR_m.Car__c}"/>>
+                    <apex:column value="{!CAR_m.Country__c}"/>>
+                   
+            
+            </apex:pageBlockTable>                  
+        </apex:pageBlock>
+    </apex:form>
+    
+</apex:page>

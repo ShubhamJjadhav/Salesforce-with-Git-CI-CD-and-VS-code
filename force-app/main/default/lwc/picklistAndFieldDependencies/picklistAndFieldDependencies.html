@@ -1,0 +1,29 @@
+<template>
+
+    <div style="width: 50%;"><lightning-record-edit-form object-api-name="Car_Booking__c" onsuccess={handleSuccess} onsubmit ={handleSubmit}>
+        <lightning-messages>
+        </lightning-messages>
+        <!-- <lightning-input-field field-name='Name'></lightning-input-field> -->
+        <lightning-input-field field-name='Need_Any_Customisations__c' ></lightning-input-field>
+        <lightning-input-field field-name='Choose_Color__c'></lightning-input-field>
+        <lightning-input-field field-name='Price_For_Color__c' ></lightning-input-field>
+        <lightning-input-field field-name='Projector_Type__c'></lightning-input-field>       
+        <lightning-input-field field-name='Price_For_Headlight__c'></lightning-input-field>
+        
+
+        <!-- <div class="slds-box slds-theme_shade">
+            <b>Total is : </b>
+            <p>{totalPrice}</p>
+      
+        </div> -->
+
+        <!-- <div class="slds-box slds-theme_shade">
+        <lightning-button  label="Total Price"  onclick={addition}></lightning-button>
+            
+        </div> -->
+
+  
+    
+    </lightning-record-edit-form></div></center>
+
+</template>

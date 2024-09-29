@@ -1,0 +1,24 @@
+<apex:page standardController="Contact">
+    <apex:form >
+    <apex:pageBlock title="DisplayAccountContact">
+        <apex:pageBlockSection title="Account Fields">
+            Name: {! Contact.Account.Name}<br/>
+             Rating: {! Contact.Account.Rating}<br/>
+             Type: {! Contact.Account.Type}<br/>
+             Industry: {! Contact.Account.Industry}<br/>
+             Phone: {! Contact.Account.Phone}<br/>
+             Ownership: {! Contact.Account.Ownership}<br/>
+        </apex:pageBlockSection>
+        <apex:pageBlockSection title="Contact Fields">
+            
+            First Name : {! Contact.FirstName}<br/>
+            Last Name : {! Contact.LastName}<br/>
+            Title : {! Contact.Title}<br/>
+            Email : {! Contact.Email}<br/>
+            Phone : {! Contact.FirstName}<br/>
+            Department : {! Contact.Department}<br/>
+        </apex:pageBlockSection>
+        
+    </apex:pageBlock>
+        </apex:form>
+</apex:page>

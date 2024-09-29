@@ -1,0 +1,14 @@
+<template>
+     
+    <lightning-card title="Car Record For Customers">
+        <template if:true={tableData}>
+            <lightning-datatable
+                key-field="Id"
+                data={tableData}
+                columns={columns}>
+								<br>
+            </lightning-datatable>
+        </template>
+      
+    </lightning-card>
+ </template>

@@ -1,0 +1,29 @@
+<aura:component controller="DisplayCompanyController" implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+	<aura:handler name="init" value="{!this}" action="{!c.DisplayCompanyController}"></aura:handler>
+    <aura:attribute name="listComp" type="List"></aura:attribute>
+    
+    <div class="slds-page-header">
+    <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+        <thead>
+        <tr>
+        <td>Name</td>
+            <td>Email</td>
+            <td>Start Date</td>
+            <td>Salary__c</td>
+        </tr>
+        </thead>
+        
+        <tbody>
+            <aura:iteration items="{!v.listComp}" var="comp">
+            <tr>
+                <td>{!comp.Name}</td>
+                <td>{!comp.Email__c}</td>   
+                <td>{!comp.Start_Date__c}</td>
+                <td>{!comp.Salary__c}</td>
+            </tr>
+            
+            </aura:iteration>
+        </tbody>
+        </table>
+    </div>
+</aura:component>

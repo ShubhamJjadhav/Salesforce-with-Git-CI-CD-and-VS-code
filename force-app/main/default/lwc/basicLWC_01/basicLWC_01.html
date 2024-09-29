@@ -1,0 +1,62 @@
+<template>
+    <h1><b>Welcome to LWC Component</b></h1>
+    <br>
+<!--***********************************************************************************-->
+    <lightning-input label="Enter Product ID" onchange={pidChange}></lightning-input>
+    <br>
+    <b> Product id is ' {prodId} ' </b>
+    <br>
+    <br>
+
+<!--***********************************************************************************-->
+    <lightning-input label ="Enter your name" onchange={nameChange}></lightning-input>
+    <br>
+    <b> Your Name is  ' {Name} '  </b>
+    <br>
+    <br>
+<!--***********************************************************************************-->  
+<lightning-input label ="Add product name" onchange={pnameChange}></lightning-input>
+<lightning-input label ="Add product price" onchange={ppriceChange}></lightning-input>  
+
+<!--Adding button to the component-->
+<br>
+<br>
+<lightning-button label="Add Item" variant="brand" onclick={demoAdd} ></lightning-button>
+
+<br>
+<br>
+    <b>2. List of Product </b> 
+    <div class="slds-grid slds-wrap ">
+      
+        <!--Here we are adding for:index to get the index of product item to delete onclick action-->
+        <template for:each={prodList} for:item="pro" for:index="index">
+            <div key={pro.proId} class="slds-col slds-size_4-of-12">  
+            <lightning-card title={pro.prodName}  >
+                
+                <div class="slds-col">
+                    Product ID : <b> {pro.prodId}</b>
+                    &nbsp; 
+                    Product Price  : <b> {pro.prodPrice}</b>
+                    <lightning-button label="Delete" variant="destructive" icon-name="delete" icon-position="right" value={index} onclick={demoDelete}></lightning-button>
+                </div> 
+
+            </lightning-card>
+        </div>  
+        </template>
+
+    </div>
+
+
+<!--***********************************************************************************-->    
+
+    <b> 3. Array list at index 1 : {demoGetData} </b>
+    
+    </br>
+    </br>
+
+
+<!--***********************************************************************************-->    
+    <b>4. Addition is : {addNumber}</b>
+
+
+</template>

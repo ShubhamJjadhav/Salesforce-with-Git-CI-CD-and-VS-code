@@ -1,0 +1,21 @@
+<aura:component controller = "CreateAccountCtrl" >
+    <div class = "slds-page-header">
+        
+
+    	Account Details
+    </div>
+    <div>
+    	<lightning:input type="text" label="Account Name" aura:id="name"></lightning:input>
+        <lightning:input type = "String" label = "Account Number" aura:id = "accountNumber"></lightning:input>
+  		<lightning:input type = "text" label = "Billing City" aura:id = "billingCity"></lightning:input>
+       	<lightning:input type="text" label="Phone" aura:id="phone"></lightning:input>  
+
+        
+    </div>
+    <div>
+        <br/>
+        <lightning:button variant = "brand" label = "Save Details" onclick = "{!c.saveAccount}" ></lightning:button>
+   		
+    </div>
+	
+</aura:component>

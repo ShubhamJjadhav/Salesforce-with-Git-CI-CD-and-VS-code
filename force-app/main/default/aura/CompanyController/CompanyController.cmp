@@ -1,0 +1,33 @@
+<aura:component controller="CompanyController">
+    
+    <aura:handler name="init" value="{!this}" action="{!c.callJsfunction}"/>
+    <aura:attribute name="listComp" type="List"></aura:attribute>
+    <aura:attribute name="myName" type="String" />
+    
+    <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+    <thead>
+        <tr>
+        <th class="" scope="col">
+            <div class="sldc-truncate" title="Name">Name</div>
+            </th>
+            <th class="" scope="col">
+            <div class="sldc-truncate" title="Salary_c">Salary_c</div>
+            </th>
+        </tr>                                       
+        </thead>
+    <tbody>
+        <aura:iteration items="{!v.listComp}" var="comp">
+        <tr>
+            <th>
+            {!comp.Name}
+            </th>
+            
+            <th>
+            {!comp.Salary__c}
+            </th>
+            </tr>
+            
+        </aura:iteration>
+        </tbody>
+                </table>
+	</aura:component>

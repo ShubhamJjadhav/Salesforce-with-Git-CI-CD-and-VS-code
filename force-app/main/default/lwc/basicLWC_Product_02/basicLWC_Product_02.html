@@ -1,0 +1,66 @@
+<template>
+    <lightning-card>
+        <div class="slds-m-around_medium">
+            <lightning-input label="Product Id" onchange={idChange}></lightning-input>
+            <!---->
+            <lightning-input label="Product Name" onchange={nameChange}></lightning-input>
+            <!---->
+            <lightning-input label="Product Price" onchange={priceChange}></lightning-input>
+            <!---->
+            <lightning-combobox name="Status" label="Product Type" value={value} placeholder="Select Progress"
+                options={myOpt} onchange={typeChange}>
+                <!---->
+            </lightning-combobox>
+
+            <lightning-radio-group name="radioGroup" label="Product Online" options={getMyRadio} value={value}
+                type="radio" onchange={onlineChange}>
+                <!---->
+            </lightning-radio-group>
+
+            <lightning-input-rich-text label="Product Image" value={getMyImg} onchange={imageChange}>
+            </lightning-input-rich-text>
+
+            <p class="slds-m-vertical_small">
+                <lightning-button label="Add Button" onclick={addData} variant="brand"></lightning-button>
+            </p>
+
+            <p>
+                <lightning-button label="Show Button" onclick={dataShow} variant="brand"></lightning-button>
+            </p>
+
+        </div>
+
+        <!--********************************To Display Data on Page******************************************************-->
+
+
+        <div class="slds-m-around_large">
+            <template for:item="demoProd" for:each={Demo_Product__c.data} for:index="index">
+                <tr key={demoProd.Product_ID__c}>
+                    <td> 
+                        <b> Product Id : </b> {demoProd.Product_ID__c} &nbsp;
+                        <b> Product Name : </b>{demoProd.Product_Name__c} &nbsp;
+                        <b> Product Online : </b> {demoProd.Product_Online__c} &nbsp;
+                        <b> Product Price : </b>{demoProd.Product_Price__c} &nbsp;
+                        <b> Product Type : </b>{demoProd.Product_Type__c} &nbsp;
+                        <b> Product Image : </b>
+                    </td>
+                 
+                    <td>   
+                        <!--to show image on component using lightning formatted rich text-->
+                        <lightning-formatted-rich-text value={demoProd.Product_Image__c}> <b> Product image : </b>
+                        </lightning-formatted-rich-text>
+                        <lightning-button label="Delete" variant="Destructive" value={demoProd.Product_ID__c} onclick={handleDelete}></lightning-button>
+                    </td>
+
+                </tr>
+            </template>
+        </div>          
+
+    </lightning-card>
+
+    
+
+
+
+
+</template>

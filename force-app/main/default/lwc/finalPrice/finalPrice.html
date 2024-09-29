@@ -1,0 +1,24 @@
+<template>
+    <lightning-card  title="Final Amount">
+        <div class="slds-box slds-theme_shade">
+            <lightning-input type="number"  name="input2" label="Price for Colour" onchange={handleNumberOneChange} value={PriceForColours} ></lightning-input>
+            <lightning-input type="number"  name="input2" label="Price For Headlight" onchange={handleNumberTwoChange} value={PriceForHeadlight} ></lightning-input>
+            <lightning-input type="number"  name="input2" label="Price For Transmission" onchange={handleNumberThreeChange} value={PriceForTransmission} ></lightning-input>
+        </div>
+
+        <div class="slds-box slds-theme_shade">
+            <b>Total Price : </b>
+            <p>{totalPrice}</p>            
+        </div>
+
+        <div class="slds-box slds-theme_shade">
+            <lightning-button  label="Calculate Price"  onclick={addition}></lightning-button>
+            
+        </div>
+
+
+
+
+    </lightning-card>
+    
+</template>

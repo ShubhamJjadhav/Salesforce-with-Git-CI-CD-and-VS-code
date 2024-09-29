@@ -1,0 +1,28 @@
+<aura:component controller="AccountOpportunity" implements="flexipage:availableForAllPageTypes" access="global">
+    <aura:handler name="init" value="{!this}" action="{!c.myAction}"/>
+    <aura:attribute name="accounts" type="Account[]" />
+    <table>
+        <tr>
+            <td>
+                <b>Name</b>
+            </td>
+  
+            <td>
+                <b>Oppurtunities</b>
+            </td>
+        </tr>
+        <aura:iteration items="{!v.accounts}" var="accOppName" >
+            <tr>  
+                <td> {!accOppName.Name}  </td>
+                
+                <table>
+                    <aura:iteration items="{!accOppName.Oppurtunity}" var="opp" >
+                        <tr>
+                            <td>{!Opp.AccountId}</td>
+                        </tr>
+                    </aura:iteration>
+                </table>
+            </tr> 
+         </aura:iteration>                                           
+    </table>    
+</aura:component>

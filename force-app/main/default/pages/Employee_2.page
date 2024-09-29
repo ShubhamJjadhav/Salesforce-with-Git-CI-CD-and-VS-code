@@ -1,0 +1,11 @@
+<apex:page standardController="Employee__c">
+    <apex:form >
+        <apex:pageBlock title="Employee Input Form">
+            Name :   <apex:inputField value="{!Employee__c.Name}"/><br/>
+             Salary :   <apex:inputField value="{!Employee__c.Salary__c}"/><br/>
+             Experience	:   <apex:inputField value="{!Employee__c.Experience__c}"/><br/>
+            Age :   <apex:inputField value="{!Employee__c.Age__c}"/><br/>
+            <apex:commandButton value="Save" action="{!save}"/>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>
