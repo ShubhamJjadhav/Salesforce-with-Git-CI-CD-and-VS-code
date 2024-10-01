@@ -275,8 +275,12 @@ public class AccountTriggerHandler {
         
     }
         
-    //13. 
+    //13.Update Description on Account when Account is Inserted then Update Description as 'Account has been inserted'
+    public static void isAccountInserted (List <Account> accList) {
+        for (Account acc : accList){
+            acc.Description = 'Account has been inserted';
+        }
         
-    
-    
+    }
+           
 }
